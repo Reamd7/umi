@@ -5,7 +5,7 @@ import UmiError, { ERROR_CODE_MAP } from './UmiError';
 import Common from './Common';
 
 marked.setOptions({
-  renderer: new TerminalRenderer(),
+  renderer: new TerminalRenderer() as any,
 });
 
 interface ILogErrorOpts {

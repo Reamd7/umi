@@ -36,6 +36,7 @@
     "@umijs/bundler-utils": "3.3.6",
     "@umijs/types": "3.3.6",
     "@umijs/utils": "3.3.6",
+    "@umijs/server": "3.3.6",
     "babel-loader": "8.2.2",
     "copy-webpack-plugin": "6.1.0",
     "css-loader": "3.6.0",

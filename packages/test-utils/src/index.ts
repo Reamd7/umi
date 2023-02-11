@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { readFileSync } from 'fs';
-import { Service as UmiService } from 'umi';
+import { Service as UmiService } from '@umijs/core';
 import { render as renderTL } from '@testing-library/react';
 
 export async function generateTmp(opts: {

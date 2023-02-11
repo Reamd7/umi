@@ -17,5 +17,5 @@ export function parse(code: string): t.File {
       'decorators-legacy',
     ],
     allowAwaitOutsideFunction: true,
-  });
+  }) as t.File;
 }

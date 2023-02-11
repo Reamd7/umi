@@ -10,7 +10,34 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
-    "declaration": true
+    "declaration": true,
+    "useUnknownInCatchVariables": false,
+    "paths": {
+      "@umijs/ast": ["../ast/src"],
+      "@umijs/babel-plugin-auto-css-modules": [
+        "../babel-plugin-auto-css-modules/src"
+      ],
+      "@umijs/babel-plugin-import-to-await-require": [
+        "../babel-plugin-import-to-await-require/src"
+      ],
+      "@umijs/babel-plugin-lock-core-js-3": [
+        "../babel-plugin-lock-core-js-3/src"
+      ],
+      "@umijs/babel-preset-umi": ["../babel-preset-umi/src"],
+      "@umijs/bundler-utils": ["../bundler-utils/src"],
+      "@umijs/bundler-webpack": ["../bundler-webpack/src"],
+      "@umijs/core": ["../core/src"],
+      "@umijs/create-umi-app": ["../create-umi-app/src"],
+      "@umijs/preset-built-in": ["../preset-built-in/src"],
+      "@umijs/renderer-mpa": ["../renderer-mpa/src"],
+      "@umijs/renderer-react": ["../renderer-react/src"],
+      "@umijs/runtime": ["../runtime/src"],
+      "@umijs/server": ["../server/src"],
+      "@umijs/test": ["../test/src"],
+      "@umijs/test-utils": ["../test-utils/src"],
+      "umi": ["../umi/src"],
+      "@umijs/utils": ["../utils/src"]
+    }
   },
   "exclude": [
     "node_modules",
