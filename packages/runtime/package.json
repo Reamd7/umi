@@ -32,6 +32,9 @@
     "react-router-dom": "5.2.0",
     "use-subscription": "1.5.1"
   },
+  "devDependencies": {
+    "@types/react": "16.x || 17.x"
+  },
   "peerDependencies": {
     "react": "16.x || 17.x"
   },

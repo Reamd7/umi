@@ -137,7 +137,7 @@ export const NODE_RESOLVERS = [
 ];
 
 export function findObjectLiteralProperties(node: t.ObjectExpression) {
-  const target = {};
+  const target: Record<string, any> = {};
   node.properties.forEach((p) => {
     if (t.isObjectProperty(p) && t.isIdentifier(p.key)) {
       const resolver = LITERAL_NODE_RESOLVERS.find((resolver) =>
@@ -152,7 +152,7 @@ export function findObjectLiteralProperties(node: t.ObjectExpression) {
 }
 
 export function findObjectMembers(node: t.ObjectExpression) {
-  const target = {};
+  const target: Record<any, any> = {};
   node.properties.forEach((p) => {
     if (t.isObjectMember(p) && t.isIdentifier(p.key)) {
       if (t.isObjectMethod(p)) {
@@ -185,7 +185,7 @@ export function findClassStaticProperty(node: t.Class) {
   let body = node.body;
   if (!t.isClassBody(body)) return;
 
-  const target = {};
+  const target: Record<string, any> = {};
   body.body.forEach((p) => {
     if (isStaticNode(p) && t.isIdentifier(p.key)) {
       if (t.isMethod(p) || t.isTSDeclareMethod(p)) {

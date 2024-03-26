@@ -25,5 +25,14 @@
   },
   "dependencies": {
     "@umijs/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "father": "4.4.0",
+    "@swc/core": "^1.3.53",
+    "typescript": "5.4.3"
+  },
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build"
   }
 }
