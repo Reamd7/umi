@@ -328,12 +328,18 @@ importers:
 
   packages/babel-plugin-auto-css-modules:
     specifiers:
+      '@swc/core': ^1.3.53
       '@umijs/deps': workspace:*
       '@umijs/utils': workspace:*
+      father: 4.4.0
+      typescript: 5.4.3
     dependencies:
       '@umijs/utils': link:../utils
     devDependencies:
+      '@swc/core': 1.4.11
       '@umijs/deps': link:../deps
+      father: 4.4.0
+      typescript: 5.4.3
 
   packages/babel-plugin-import-to-await-require:
     specifiers:

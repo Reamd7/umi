@@ -34,5 +34,8 @@
   "scripts": {
     "dev": "father dev",
     "build": "father build"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
