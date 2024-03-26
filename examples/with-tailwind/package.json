@@ -18,6 +18,6 @@
     "postcss": "7.x",
     "postcss-import": "12.x",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "umi": "latest"
+    "umi": "workspace:*"
   }
 }

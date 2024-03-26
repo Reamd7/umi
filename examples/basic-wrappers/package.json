@@ -18,7 +18,7 @@
     "xiaohuoni <xiaohuoni@gmail.com> (https://github.com/xiaohuoni)"
   ],
   "dependencies": {
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "license": "MIT",
   "bugs": "http://github.com/umijs/umi/issues",

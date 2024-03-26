@@ -22,7 +22,7 @@
   "dependencies": {
     "mobx": "^6.3.2",
     "mobx-react": "^7.2.0",
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "bugs": "http://github.com/umijs/umi/issues",
   "homepage": "https://github.com/umijs/umi/tree/3.x/examples/with-mobx#readme"

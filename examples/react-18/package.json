@@ -15,7 +15,7 @@
   },
   "private": true,
   "peerDependencies": {
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "license": "ISC"
 }

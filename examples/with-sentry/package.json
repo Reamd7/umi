@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "umi": "latest",
+    "umi": "workspace:*",
     "@umijs/plugin-antd": "0.9.1",
     "@umijs/plugin-dva": "0.12.1",
     "@umijs/plugin-request": "2.5.2",

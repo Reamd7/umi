@@ -22,7 +22,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@umijs/plugin-antd": "^0.10.0",
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "bugs": "http://github.com/umijs/umi/issues",
   "homepage": "https://github.com/umijs/umi/tree/3.x/examples/with-ant-design#readme"

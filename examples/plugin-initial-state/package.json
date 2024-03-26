@@ -20,7 +20,7 @@
   "dependencies": {
     "@umijs/plugin-initial-state": "^2.3.0",
     "@umijs/plugin-model": "^2.5.7",
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "license": "MIT",
   "bugs": "http://github.com/umijs/umi/issues",

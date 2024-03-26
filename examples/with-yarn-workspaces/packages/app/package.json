@@ -6,7 +6,7 @@
     "build": "umi build"
   },
   "dependencies": {
-    "umi": "latest"
+    "umi": "workspace:*"
   },
   "license": "MIT"
 }
