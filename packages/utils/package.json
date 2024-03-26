@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@umijs/babel-preset-umi": "3.5.36",
-    "@umijs/deps": "3.5.36"
+    "@umijs/babel-preset-umi": "workspace:*",
+    "@umijs/deps": "workspace:*"
   }
 }

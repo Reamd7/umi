@@ -25,12 +25,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@umijs/babel-preset-umi": "3.5.36",
-    "@umijs/core": "3.5.36",
-    "@umijs/deps": "3.5.36",
-    "@umijs/renderer-react": "3.5.36",
-    "@umijs/server": "3.5.36",
-    "@umijs/utils": "3.5.36",
+    "@umijs/babel-preset-umi": "workspace:*",
+    "@umijs/core": "workspace:*",
+    "@umijs/deps": "workspace:*",
+    "@umijs/renderer-react": "workspace:*",
+    "@umijs/server": "workspace:*",
+    "@umijs/utils": "workspace:*",
     "webpack-chain": "6.5.1"
   }
 }

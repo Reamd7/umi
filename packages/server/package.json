@@ -24,8 +24,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@umijs/core": "3.5.36",
-    "@umijs/deps": "3.5.36",
-    "@umijs/utils": "3.5.36"
+    "@umijs/core": "workspace:*",
+    "@umijs/deps": "workspace:*",
+    "@umijs/utils": "workspace:*"
   }
 }

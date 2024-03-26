@@ -25,7 +25,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@umijs/utils": "3.5.36"
+    "@umijs/utils": "workspace:*"
   },
   "devDependencies": {
     "@babel/traverse": "7.18.8"
