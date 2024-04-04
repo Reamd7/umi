@@ -1,5 +1,6 @@
 import type { NodePath } from '@babel/traverse';
-import { t, winPath } from '@umijs/utils';
+import t from '@babel/types';
+import { winPath } from '@umijs/umi-utils';
 import { extname, isAbsolute } from 'path';
 
 type TLibs = (RegExp | string)[];
