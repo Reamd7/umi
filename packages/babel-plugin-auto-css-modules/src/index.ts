@@ -1,4 +1,5 @@
-import { t, traverse } from '@umijs/utils';
+import type * as traverse from '@babel/traverse';
+import * as t from '@babel/types';
 import { extname } from 'path';
 
 export interface IOpts {
