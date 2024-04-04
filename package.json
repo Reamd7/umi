@@ -20,14 +20,15 @@
   },
   "devDependencies": {
     "@types/node": "^14.0.23",
+    "@types/shelljs": "0.8.15",
+    "core-js": "^3.36.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.3.0",
     "prettier-plugin-organize-imports": "^2.1.0",
-    "typescript": "5.4.3",
-    "yorkie": "^2.0.0",
     "shelljs": "0.8.5",
-    "@types/shelljs": "0.8.15",
-    "tsx": "4.7.2"
+    "tsx": "4.7.2",
+    "typescript": "5.4.3",
+    "yorkie": "^2.0.0"
   },
   "repository": {
     "type": "git",

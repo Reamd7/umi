@@ -35,7 +35,8 @@
     "typescript": "5.4.3",
     "@babel/core": "7.24.4",
     "@types/babel__core": "7.20.5",
-    "@types/babel__traverse": "7.20.5"
+    "@types/babel__traverse": "7.20.5",
+    "@types/jest": "29.5.12"
   },
   "scripts": {
     "dev": "father dev",
