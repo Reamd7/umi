@@ -1,4 +1,5 @@
-import { t, traverse } from '@umijs/utils';
+import traverse from '@babel/traverse';
+import * as t from '@babel/types';
 import { parse } from '../utils/parse';
 import {
   findArrayElements,
@@ -9,7 +10,7 @@ import {
 export function getExportProps(code: string) {
   const ast = parse(code);
   let props: unknown = undefined;
-  traverse.default(ast, {
+  traverse(ast, {
     Program: {
       enter(path: any) {
         const node = path.node;
