@@ -1,5 +1,6 @@
-import { lodash as _ } from '@umijs/utils';
-import { extname, parse, relative, sep } from 'path';
+import _ from 'lodash-es';
+import { extname, parse, relative, sep } from 'node:path';
+import * as t from '@babel/types';
 
 /**
  * convert path into componentName
@@ -22,13 +23,10 @@ export const path2Component = (filePath: string): string => {
   return filePathWithoutExt;
 };
 
-// @ts-ignore
-export default (babel) => {
-  const { types: t } = babel;
+export default () => {
 
   return {
     visitor: {
-      // @ts-ignore
       ExportDefaultDeclaration: {
         enter(path: any, state: any) {
           const def = path.node.declaration;
