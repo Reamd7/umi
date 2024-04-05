@@ -260,7 +260,6 @@ test('export *', () => {
   ).toEqual(
     `
 const __all_exports_antd = await import("foo/antd");
-
 export const {
   a: a,
   b: b,

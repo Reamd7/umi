@@ -25,9 +25,13 @@
     "access": "public"
   },
   "dependencies": {
-    "lodash-es": "4.17.21",
-    "@types/lodash-es": "4.17.12",
-    "@babel/types": "7.24.0"
+    "lodash": "4.17.21",
+    "@types/lodash": "4.17.0",
+    "@babel/types": "7.24.0",
+    "@babel/helper-plugin-utils": "7.24.0",
+    "@types/babel__helper-plugin-utils": "7.10.3",
+    "@babel/core": "7.24.4",
+    "@types/babel__core": "7.20.5"
   },
   "devDependencies": {
     "father": "4.4.0",
@@ -38,7 +42,8 @@
     "@types/jest": "29.5.12",
     "@babel/core": "7.24.4",
     "@types/babel__core": "7.20.5",
-    "dedent": "1.5.1"
+    "dedent": "1.5.1",
+    "@babel/preset-react": "7.24.1"
   },
   "scripts": {
     "dev": "father dev",

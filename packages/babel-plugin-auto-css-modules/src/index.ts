@@ -1,5 +1,6 @@
 import type * as traverse from '@babel/traverse';
-import * as t from '@babel/types';
+import type { types as t } from "@babel/core";
+import { declare } from "@babel/helper-plugin-utils";
 import { extname } from 'path';
 
 export interface IOpts {
@@ -8,12 +9,12 @@ export interface IOpts {
 
 const CSS_EXT_NAMES = ['.css', '.less', '.sass', '.scss', '.stylus', '.styl'];
 
-export default function () {
+export default declare(({ types: t, traverse, assertVersion }, opts: IOpts) => {
+  assertVersion("7.24.4");
   return {
     visitor: {
       ImportDeclaration(
         path: traverse.NodePath<t.ImportDeclaration>,
-        { opts }: { opts: IOpts },
       ) {
         const {
           specifiers,
@@ -29,7 +30,6 @@ export default function () {
       // const styles = await import('./index.less');
       VariableDeclarator(
         path: traverse.NodePath<t.VariableDeclarator>,
-        { opts }: { opts: IOpts },
       ) {
         const { node } = path;
         if (
@@ -40,11 +40,10 @@ export default function () {
           t.isStringLiteral(node.init.argument.arguments[0]) &&
           CSS_EXT_NAMES.includes(extname(node.init.argument.arguments[0].value))
         ) {
-          node.init.argument.arguments[0].value = `${
-            node.init.argument.arguments[0].value
-          }?${opts.flag || 'modules'}`;
+          node.init.argument.arguments[0].value = `${node.init.argument.arguments[0].value
+            }?${opts.flag || 'modules'}`;
         }
       },
-    } as traverse.Visitor,
+    }
   };
-}
+});

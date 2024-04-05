@@ -1,7 +1,8 @@
+import { declare } from '@babel/helper-plugin-utils';
 import type { NodePath } from '@babel/traverse';
-import t from '@babel/types';
+import * as t from '@babel/types';
 import { winPath } from '@umijs/umi-utils';
-import { extname, isAbsolute } from 'path';
+import { extname, isAbsolute } from 'node:path';
 
 type TLibs = (RegExp | string)[];
 
@@ -11,8 +12,8 @@ interface IAlias {
 
 type IExternal =
   | {
-      [key: string]: string;
-    }
+    [key: string]: string;
+  }
   | Function;
 type IExternals = IExternal[] | {};
 
@@ -189,11 +190,12 @@ function getPath(path: string, alias: IAlias) {
   return path;
 }
 
-export default function () {
+export default declare(({ types: t, assertVersion }, opts: IOpts) => {
+  assertVersion("7.24.4");
   return {
     visitor: {
       Program: {
-        exit(path: NodePath<t.Program>, { opts }: { opts: IOpts }) {
+        exit(path: NodePath<t.Program>) {
           const variableDeclarations = [];
           const exportDefaultDeclarations = [];
           let index = path.node.body.length - 1;
@@ -232,9 +234,9 @@ export default function () {
                     t.stringLiteral(
                       isMatch
                         ? `${opts.remoteName}/${getPath(
-                            d.source.value,
-                            opts.alias || {},
-                          )}`
+                          d.source.value,
+                          opts.alias || {},
+                        )}`
                         : d.source.value,
                     ),
                   ]),
@@ -409,7 +411,6 @@ export default function () {
 
       CallExpression(
         path: NodePath<t.CallExpression>,
-        { opts }: { opts: IOpts },
       ) {
         const { node } = path;
         if (
@@ -442,4 +443,4 @@ export default function () {
       },
     },
   };
-}
+})

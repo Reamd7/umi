@@ -26,11 +26,13 @@
   },
   "dependencies": {
     "@babel/types": "7.24.0",
-    "@umijs/umi-utils": "workspace:*"
+    "@umijs/umi-utils": "workspace:*",
+    "@babel/helper-plugin-utils": "7.24.0",
+    "@types/babel__helper-plugin-utils": "7.10.3",
+    "@babel/core": "7.24.4",
+    "@types/babel__core": "7.20.5"
   },
   "devDependencies": {
-    "@babel/core": "7.24.4",
-    "@types/babel__core": "7.20.5",
     "father": "4.4.0",
     "@swc/core": "1.3.53",
     "@swc/jest": "0.2.36",

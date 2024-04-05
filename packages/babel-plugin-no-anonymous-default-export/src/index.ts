@@ -1,6 +1,6 @@
-import _ from 'lodash-es';
+import upperFirst from 'lodash/upperFirst';
 import { extname, parse, relative, sep } from 'node:path';
-import * as t from '@babel/types';
+import { declare } from '@babel/helper-plugin-utils';
 
 /**
  * convert path into componentName
@@ -18,20 +18,20 @@ export const path2Component = (filePath: string): string => {
     .replace(ext, '')
     .split(sep)
     // upperFirst
-    .map((item) => _.upperFirst(item.replace(/\W/g, '')))
+    .map((item) => upperFirst(item.replace(/\W/g, '')))
     .join('');
   return filePathWithoutExt;
 };
 
-export default () => {
-
+export default declare(({ types: t, assertVersion }) => {
+  assertVersion("7.24.4");
   return {
     visitor: {
       ExportDefaultDeclaration: {
-        enter(path: any, state: any) {
+        enter(path, state) {
           const def = path.node.declaration;
           const { cwd, filename } = state.file.opts;
-          const relativePath = relative(cwd, filename);
+          const relativePath = relative(cwd!, filename!);
 
           if (
             /^\.(tsx|jsx)$/.test(extname(relativePath)) &&
@@ -72,4 +72,4 @@ export default () => {
       },
     },
   };
-};
+});

@@ -7,7 +7,7 @@ function transformWithPlugin(code: string, opts: IOpts) {
     filename,
     plugins: [
       require.resolve(
-        '@umijs/deps/compiled/babel/plugin-syntax-top-level-await',
+        '@babel/plugin-syntax-top-level-await',
       ),
       [require.resolve('./index.ts'), opts],
     ],
